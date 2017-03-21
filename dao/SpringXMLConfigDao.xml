@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+   
+    <bean id="Student" class="com.mycompany.dao.Student" autowire="byType">
+        <property name="name" value="Clement" />
+        <property name="lastname" value="Kirton" />   
+        <property name="dob" value="01/01/2000" />
+                   
+    </bean>
+    
+    <bean id="address" class="com.mycompany.dao.Address" >
+	<property name="Street" value="Yellow St" />
+        <property name="City" value="Houston" />
+        <property name="Zip" value="99556" />
+</bean>
+
+<bean id="Grade" class="com.mycompany.dao.Grade" >
+	<property name="Subject" value="Java" />
+        <property name="Letter" value="A" />
+        
+</bean>
+    
+</beans>
