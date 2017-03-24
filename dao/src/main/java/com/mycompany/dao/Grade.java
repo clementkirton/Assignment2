@@ -5,14 +5,24 @@
  */
 package com.mycompany.dao;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author cleme
  */
+
+@Component
 public class Grade {
     
-    String Subject;
-    String Letter;
+    @Autowired
+    @Value("Programing")
+    private String Subject;
+    @Autowired
+    @Value("A")
+    private String Letter;
 
     public String getSubject() {
         return Subject;

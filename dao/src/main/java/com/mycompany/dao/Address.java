@@ -5,14 +5,28 @@
  */
 package com.mycompany.dao;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author cleme
  */
+
+@Component
 public class Address {
     
-    String Street;
+    @Autowired
+    @Value("Yellow St.")
+    private String Street;
+    
+    @Autowired
+    @Value("Houston")
     String City;
+    
+    @Autowired
+    @Value("23345")
     String Zip;
 
     public Address() {

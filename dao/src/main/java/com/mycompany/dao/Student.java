@@ -6,18 +6,34 @@
 package com.mycompany.dao;
 
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author cleme
  */
+@Component
 public class Student {
-    
-   String name;
-    String lastname;
-    String dob;
-    List<Address> Adresses;
-    List<Grade> Grades;
+  
+  @Autowired
+  @Value("clement")
+  private String name;
+  
+  @Autowired
+  @Value("Kirton")
+  private String lastname;
+  
+  @Autowired
+  @Value("02-02-1993")
+  private String dob;
+  
+  @Autowired
+  private List<Address> Adresses;
+  
+  @Autowired
+  private List<Grade> Grades;
 
     public Student() {
     }
